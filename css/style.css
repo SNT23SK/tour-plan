@@ -444,6 +444,7 @@ template {
   padding-right: 75px;
   background: #F5FAFE;
   border: none;
+  outline: none;
   font-size: 12px;
   line-height: 15px;
   color: #333333;
@@ -456,6 +457,8 @@ template {
   width: 65px;
   height: 100%;
   border: none;
+  outline: none;
+  cursor: pointer;
   background-color: #EC1F46;
 }
 
