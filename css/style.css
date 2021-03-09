@@ -418,6 +418,7 @@ template {
   text-transform: uppercase;
   font-size: 14px;
   line-height: 18px;
+  font-weight: bold;
 }
 
 .logo {
@@ -444,6 +445,7 @@ template {
   outline: none;
   font-size: 12px;
   line-height: 15px;
+  font-weight: normal;
   color: #333333;
 }
 
@@ -481,6 +483,7 @@ template {
   margin-left: 18px;
   font-size: 14px;
   line-height: 18px;
+  font-weight: normal;
   color: #333333;
 }
 
@@ -499,6 +502,7 @@ template {
 .breadcrumb-list__item {
   font-size: 10px;
   line-height: 13px;
+  font-weight: normal;
 }
 
 .breadcrumb-list__item:not(:last-child)::after {
@@ -512,18 +516,20 @@ template {
 }
 
 .hotel {
-  padding-top: 23px;
-  padding-bottom: 70px;
+  margin-top: 23px;
+  margin-bottom: 70px;
 }
 
 .hotel-name {
   font-size: 24px;
   line-height: 30px;
+  font-weight: bold;
 }
 
 .hotel-desription {
   font-size: 12px;
   line-height: 15px;
+  font-weight: normal;
 }
 
 .hotel-wrapper {
@@ -560,7 +566,7 @@ template {
 }
 
 .hotel-info__desription {
-  margin: 0;
+  margin: 5px 0;
 }
 
 .stars {
@@ -571,6 +577,7 @@ template {
 .offer {
   font-size: 10px;
   line-height: 13px;
+  font-weight: 600;
   padding: 4px 9px;
   background-color: #EC1F46;
   border-radius: 3px;
@@ -592,7 +599,13 @@ template {
 
 .rating__counter {
   font-size: 14px;
-  line-height: 18px;
+  line-height: 17.5px;
+  font-weight: bold;
+}
+
+.five {
+  font-size: 10px;
+  line-height: 12.5px;
 }
 
 @media (max-width: 1200px) {
@@ -678,8 +691,8 @@ template {
     width: 100%;
   }
   .stars {
-    -ms-flex-preferred-size: content;
-        flex-basis: content;
+    -ms-flex-preferred-size: auto;
+        flex-basis: auto;
   }
 }
 
