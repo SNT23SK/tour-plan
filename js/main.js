@@ -42,3 +42,7 @@ document.addEventListener("keydown", function (event) {
 		reviewsSlader.slideNext();
 	}
 });
+
+$(document).ready(function () {
+	$(".newsletter").parallax({ imageSrc: "../img/newsletter-bg.jpeg", speed: "2", zindex: "50" });
+});
