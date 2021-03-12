@@ -1071,7 +1071,13 @@ template {
   .newsletter {
     padding: 76px 0 83px 0;
   }
+  .newsletter-title__strong {
+    font-size: 30px;
+    line-height: 38px;
+  }
   .newsletter__title {
+    font-size: 20px;
+    line-height: 25px;
     margin-bottom: 37px;
   }
   .subscribe {
