@@ -878,7 +878,7 @@ template {
 
 .subscribe {
   position: relative;
-  width: 355px;
+  width: 350px;
   height: 55px;
   border-radius: 4px;
   overflow: hidden;
@@ -1094,8 +1094,7 @@ template {
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  .hotel__slider {
-    max-width: 100%;
+  .hotel-slider {
     margin-bottom: 30px;
   }
   .hotel-right {
@@ -1103,6 +1102,10 @@ template {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+  }
+  .hotel__slider {
+    margin-left: 0;
+    width: 100%;
   }
   .booking {
     width: 340px;
