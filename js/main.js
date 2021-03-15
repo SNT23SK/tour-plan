@@ -2,7 +2,7 @@ const hotelSlider = new Swiper(".hotel-slider", {
 	// Optional parameters
 	direction: "horizontal",
 	loop: true,
-	speed: 2000,
+	speed: 1000,
 	effect: "fade",
 
 	// Navigation arrows
@@ -44,5 +44,8 @@ document.addEventListener("keydown", function (event) {
 });
 
 $(document).ready(function () {
-	$(".newsletter").parallax({ imageSrc: "../img/newsletter-bg.jpeg", speed: "2", zindex: "50" });
+	$(".newsletter").parallax({
+		imageSrc: "./img/newsletter-bg.jpeg",
+		speed: "0.2",
+	});
 });

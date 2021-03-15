@@ -831,10 +831,6 @@ template {
 .newsletter {
   position: relative;
   padding: 98px 0 87px 0;
-  background-image: url(../img/newsletter-bg.jpeg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
 }
 
 .newsletter:before {
@@ -916,6 +912,11 @@ template {
   font-weight: bold;
   font-size: 12px;
   line-height: 15px;
+}
+
+.parallax {
+  min-height: 400px;
+  background: transparent;
 }
 
 .reviews {
