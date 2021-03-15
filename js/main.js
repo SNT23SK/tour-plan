@@ -11,6 +11,8 @@ const hotelSlider = new Swiper(".hotel-slider", {
 		prevEl: ".hotel-slider__button--prev",
 	},
 });
+
+// Подключение клавиш влево и вправо
 document.addEventListener("keydown", function (event) {
 	if (event.code == "ArrowLeft") {
 		hotelSlider.slidePrev();
@@ -43,6 +45,7 @@ document.addEventListener("keydown", function (event) {
 	}
 });
 
+// Подключение параллакс-эффекта
 $(document).ready(function () {
 	$(".newsletter").parallax({
 		imageSrc: "./img/newsletter-bg.jpeg",
