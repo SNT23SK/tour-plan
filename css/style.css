@@ -1306,17 +1306,11 @@ template {
     -ms-flex-preferred-size: auto;
         flex-basis: auto;
   }
-  .hotel-right {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    min-height: 450px;
-  }
   .hotel__slider {
     height: 350px;
   }
   .booking {
+    margin-right: 20px;
     width: 100%;
   }
   .map {
@@ -1366,9 +1360,22 @@ template {
   .logo {
     width: 99px;
   }
+  .hotel-right {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    min-height: 450px;
+  }
   .hotel__slider {
     margin-bottom: 20px;
     height: 250px;
+  }
+  .booking {
+    width: 100%;
+  }
+  .map {
+    width: 100%;
   }
   .newsletter {
     padding: 76px 0 83px 0;
