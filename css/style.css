@@ -651,6 +651,8 @@ template {
 .stars {
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
+  font-size: 10px;
+  line-height: 12.5px;
 }
 
 .offer {
@@ -680,11 +682,6 @@ template {
   font-size: 14px;
   line-height: 17.5px;
   font-weight: bold;
-}
-
-.five {
-  font-size: 10px;
-  line-height: 12.5px;
 }
 
 .booking {
@@ -1151,6 +1148,53 @@ template {
   background-color: #EC1F46;
   border-radius: 4px;
   cursor: pointer;
+}
+
+.grid-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 350px 350px 350px;
+      grid-template-columns: 350px 350px 350px;
+  -ms-grid-rows: 500px 500px 500px;
+      grid-template-rows: 500px 500px 500px;
+  gap: 30px 30px;
+      grid-template-areas: "card-1 card-1 card-2" "card-3 card-4 card-5";
+}
+
+.card-1 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: card-1;
+  border: 1px solid #000;
+}
+
+.card-2 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: card-2;
+  border: 1px solid #000;
+}
+
+.card-3 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: card-3;
+  border: 1px solid #000;
+}
+
+.card-4 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: card-4;
+  border: 1px solid #000;
+}
+
+.card-5 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 3;
+  grid-area: card-5;
+  border: 1px solid #000;
 }
 
 @media (max-width: 1200px) {
