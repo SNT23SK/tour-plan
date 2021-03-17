@@ -819,7 +819,6 @@ template {
 .map {
   width: 347px;
   height: 213px;
-  background-color: black;
   border-radius: 10px;
   overflow: hidden;
 }
@@ -1291,48 +1290,6 @@ template {
   grid-area: bottom;
 }
 
-.offer-button {
-  position: absolute;
-  z-index: 10;
-  border: none;
-  outline: none;
-  border-radius: 0 4px 4px 0;
-  background-color: #EC1F46;
-  color: #fff;
-  font-weight: 600;
-  font-style: normal;
-  cursor: pointer;
-}
-
-.offer-button__big {
-  padding: 8px 12px;
-  top: 26px;
-  left: 0;
-  width: 95px;
-  height: 30px;
-  font-size: 12px;
-  line-height: 15px;
-}
-
-.offer-button__small {
-  padding: 4px 8px;
-  top: 13px;
-  left: 0;
-  width: 60px;
-  height: 18px;
-  font-size: 8px;
-  line-height: 10px;
-}
-
-.depiction {
-  margin-top: 0;
-  margin-bottom: 34px;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 22px;
-}
-
 .stars {
   margin-bottom: 5px;
 }
@@ -1376,13 +1333,46 @@ template {
      object-fit: cover;
 }
 
+.advice-top__offer {
+  position: absolute;
+  z-index: 10;
+  border: none;
+  outline: none;
+  border-radius: 0 4px 4px 0;
+  background-color: #EC1F46;
+  color: #fff;
+  font-weight: 600;
+  font-style: normal;
+  cursor: pointer;
+}
+
+.advice-top__offer_big {
+  padding: 8px 12px;
+  top: 26px;
+  left: 0;
+  width: 95px;
+  height: 30px;
+  font-size: 12px;
+  line-height: 15px;
+}
+
+.advice-top__offer_small {
+  padding: 4px 8px;
+  top: 13px;
+  left: 0;
+  width: 60px;
+  height: 18px;
+  font-size: 8px;
+  line-height: 10px;
+}
+
 .advice-bottom {
   background-color: #0A223D;
   padding: 30px 32px;
   position: relative;
 }
 
-.advice-bottom__main {
+.advice-bottom_main {
   padding: 47px 21px 35px 44px;
 }
 
@@ -1395,8 +1385,17 @@ template {
   line-height: 23px;
 }
 
-.advice-bottom__title__main {
+.advice-bottom__title_main {
   margin-bottom: 27px;
+}
+
+.advice-bottom__depiction {
+  margin-top: 0;
+  margin-bottom: 34px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 22px;
 }
 
 .advice-bottom__button {
@@ -1422,16 +1421,24 @@ template {
   margin-bottom: 24px;
 }
 
-.room__main {
+.room_main {
   margin-bottom: 34px;
 }
 
-.room__text {
+.room__info {
   margin-bottom: 11px;
   font-style: normal;
   font-weight: normal;
   font-size: 12px;
   line-height: 15px;
+}
+
+.room__text {
+  vertical-align: top;
+}
+
+.room__icon {
+  margin-right: 14px;
 }
 
 @media (max-width: 1200px) {

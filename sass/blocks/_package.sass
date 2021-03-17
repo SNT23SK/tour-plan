@@ -64,40 +64,7 @@
     grid-area: top
   &-bottom
     grid-area: bottom
-.offer-button
-  position: absolute
-  z-index: 10
-  border: none
-  outline: none
-  border-radius: 0 4px 4px 0
-  background-color: $primary
-  color: $light
-  font-weight: 600
-  font-style: normal
-  cursor: pointer
-  &__big
-    padding: 8px 12px
-    top: 26px
-    left: 0
-    width: 95px
-    height: 30px
-    font-size: 12px
-    line-height: 15px
-  &__small
-    padding: 4px 8px
-    top: 13px
-    left: 0
-    width: 60px
-    height: 18px
-    font-size: 8px
-    line-height: 10px
-.depiction
-  margin-top: 0
-  margin-bottom: 34px
-  font-style: normal
-  font-weight: normal
-  font-size: 14px
-  line-height: 22px
+
 .stars
   margin-bottom: 5px
 .price
@@ -124,11 +91,38 @@
       width: 100%
       height: 100%
       object-fit: cover
+    &__offer
+      position: absolute
+      z-index: 10
+      border: none
+      outline: none
+      border-radius: 0 4px 4px 0
+      background-color: $primary
+      color: $light
+      font-weight: 600
+      font-style: normal
+      cursor: pointer
+      &_big
+        padding: 8px 12px
+        top: 26px
+        left: 0
+        width: 95px
+        height: 30px
+        font-size: 12px
+        line-height: 15px
+      &_small
+        padding: 4px 8px
+        top: 13px
+        left: 0
+        width: 60px
+        height: 18px
+        font-size: 8px
+        line-height: 10px
   &-bottom
     background-color: $dark
     padding: 30px 32px
     position: relative
-    &__main
+    &_main
       padding: 47px 21px 35px 44px
     &__title
       margin-top: 0
@@ -137,8 +131,15 @@
       font-weight: bold
       font-size: 18px
       line-height: 23px
-      &__main
+      &_main
         margin-bottom: 27px
+    &__depiction
+      margin-top: 0
+      margin-bottom: 34px
+      font-style: normal
+      font-weight: normal
+      font-size: 14px
+      line-height: 22px
     &__button
       position: absolute
       z-index: 10
@@ -158,11 +159,15 @@
       cursor: pointer
 .room
   margin-bottom: 24px
-  &__main
+  &_main
     margin-bottom: 34px
-  &__text
+  &__info
     margin-bottom: 11px
     font-style: normal
     font-weight: normal
     font-size: 12px
     line-height: 15px
+  &__text
+    vertical-align: top
+  &__icon
+    margin-right: 14px
