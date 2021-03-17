@@ -25,16 +25,17 @@
     background-color: $dark
 .card-2
   grid-area: card-2
-  border: 1px solid #000
+  border-radius: 8px
+  overflow: hidden
   display: grid
-  grid-template-rows: 1fr 1fr
+  grid-auto-columns: 350px
+  grid-template-rows: 250px 250px
   grid-template-areas: "top""bottom"
   &-top
     grid-area: top
-    border: 1px solid red
+    position: relative
   &-bottom
     grid-area: bottom
-    border: 1px solid red
 .card-3
   grid-area: card-3
   border: 1px solid #000
@@ -73,22 +74,35 @@
     border: 1px solid red
 .offer-button
   position: absolute
-  top: 26px
-  left: 0
   z-index: 10
   border: none
   outline: none
-  width: 95px
-  height: 30px
   border-radius: 0 4px 4px 0
   background-color: $primary
   color: $light
-  font-style: normal
-  font-weight: 600
-  font-size: 12px
-  line-height: 15px
+  &__big
+    padding: 8px 12px
+    top: 26px
+    left: 0
+    width: 95px
+    height: 30px
+    font-style: normal
+    font-weight: 600
+    font-size: 12px
+    line-height: 15px
+  &__small
+    padding: 4px 8px
+    top: 13px
+    left: 0
+    width: 60px
+    height: 18px
+    font-style: normal
+    font-weight: 600
+    font-size: 8px
+    line-height: 10px
 .right
   padding: 47px 21px 30px 44px
+  position: relative
   &__stars
     margin-bottom: 5px
   &__name
@@ -127,3 +141,44 @@
     font-weight: bold
     font-size: 24px
     line-height: 30px
+.advice
+  &-top
+    &__image
+      width: 100%
+      height: 100%
+      object-fit: cover
+  &-bottom
+    background-color: $dark
+    padding: 30px 32px
+    position: relative
+    &__name
+      margin-top: 0
+      margin-bottom: 23px
+      font-style: normal
+      font-weight: bold
+      font-size: 18px
+      line-height: 23px
+    &__room
+      margin-bottom: 24px
+    &__text
+      margin-bottom: 11px
+      font-style: normal
+      font-weight: normal
+      font-size: 12px
+      line-height: 15px
+    &__button
+      position: absolute
+      z-index: 10
+      right: 21px
+      bottom: 30px
+      padding: 10px 26px
+      border: none
+      outline: none
+      border-radius: 4px
+      background-color: $primary
+      color: $light
+      font-family: Nunito
+      font-style: normal
+      font-weight: 600
+      font-size: 14px
+      line-height: 19px
