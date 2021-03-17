@@ -18,22 +18,14 @@
   margin-bottom: 70px
 .card-1
   grid-area: card-1
-  border-radius: 8px
-  overflow: hidden
-  display: grid
   grid-template-columns: 1fr 1fr
   grid-auto-rows: 500px
   grid-template-areas: "left right"
   &-left
     grid-area: left
     position: relative
-    &__image
-      width: 100%
-      height: 100%
-      object-fit: cover
   &-right
     grid-area: right
-    background-color: $dark
 .card-2
   grid-area: card-2
   grid-auto-columns: 350px
@@ -61,10 +53,8 @@
   grid-template-areas: "top""bottom"
   &-top
     grid-area: top
-    border: 1px solid red
   &-bottom
     grid-area: bottom
-    border: 1px solid red
 .card-5
   grid-area: card-5
   grid-auto-columns: 350px
@@ -72,10 +62,8 @@
   grid-template-areas: "top""bottom"
   &-top
     grid-area: top
-    border: 1px solid red
   &-bottom
     grid-area: bottom
-    border: 1px solid red
 .offer-button
   position: absolute
   z-index: 10
@@ -86,6 +74,7 @@
   color: $light
   font-weight: 600
   font-style: normal
+  cursor: pointer
   &__big
     padding: 8px 12px
     top: 26px
@@ -102,33 +91,15 @@
     height: 18px
     font-size: 8px
     line-height: 10px
-.right
-  padding: 47px 21px 30px 44px
-  position: relative
-  &__stars
-    margin-bottom: 5px
-  &__name
-    margin-top: 0
-    margin-bottom: 27px
-    font-style: normal
-    font-weight: bold
-    font-size: 18px
-    line-height: 23px
-  &__depiction
-    margin-top: 0
-    margin-bottom: 34px
-    font-style: normal
-    font-weight: normal
-    font-size: 14px
-    line-height: 22px
-  &__room
-    margin-bottom: 37px
-  &__text
-    margin-bottom: 11px
-    font-style: normal
-    font-weight: normal
-    font-size: 12px
-    line-height: 15px
+.depiction
+  margin-top: 0
+  margin-bottom: 34px
+  font-style: normal
+  font-weight: normal
+  font-size: 14px
+  line-height: 22px
+.stars
+  margin-bottom: 5px
 .price
   display: block
   &__old
@@ -157,6 +128,8 @@
     background-color: $dark
     padding: 30px 32px
     position: relative
+    &__main
+      padding: 47px 21px 35px 44px
     &__title
       margin-top: 0
       margin-bottom: 23px
@@ -164,6 +137,8 @@
       font-weight: bold
       font-size: 18px
       line-height: 23px
+      &__main
+        margin-bottom: 27px
     &__button
       position: absolute
       z-index: 10
@@ -180,8 +155,11 @@
       font-weight: 600
       font-size: 14px
       line-height: 19px
+      cursor: pointer
 .room
   margin-bottom: 24px
+  &__main
+    margin-bottom: 34px
   &__text
     margin-bottom: 11px
     font-style: normal
