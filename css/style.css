@@ -1171,120 +1171,117 @@ template {
   -ms-grid-rows: 500px 500px;
       grid-template-rows: 500px 500px;
   gap: 30px 30px;
-      grid-template-areas: "card-1 card-1 card-2" "card-3 card-4 card-5";
+      grid-template-areas: "blueheaven blueheaven bellemare" "whitepalace luxuryplace fivestar";
   color: #fff;
   margin-bottom: 70px;
 }
 
-.card-1 {
+.blueheaven {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   -ms-grid-column-span: 2;
-  grid-area: card-1;
+  grid-area: blueheaven;
   -ms-grid-columns: 1fr 1fr;
       grid-template-columns: 1fr 1fr;
   grid-auto-rows: 500px;
       grid-template-areas: "left right";
 }
 
-.card-1-left {
+.blueheaven-left {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: left;
-  position: relative;
 }
 
-.card-1-right {
+.blueheaven-right {
   -ms-grid-row: 1;
   -ms-grid-column: 2;
   grid-area: right;
 }
 
-.card-2 {
+.bellemare {
   -ms-grid-row: 1;
   -ms-grid-column: 3;
-  grid-area: card-2;
+  grid-area: bellemare;
   grid-auto-columns: 350px;
   -ms-grid-rows: 250px 250px;
       grid-template-rows: 250px 250px;
       grid-template-areas: "top" "bottom";
 }
 
-.card-2-top {
+.bellemare-top {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: top;
 }
 
-.card-2-bottom {
+.bellemare-bottom {
   -ms-grid-row: 2;
   -ms-grid-column: 1;
   grid-area: bottom;
 }
 
-.card-3 {
+.whitepalace {
   -ms-grid-row: 2;
   -ms-grid-column: 1;
-  grid-area: card-3;
+  grid-area: whitepalace;
   grid-auto-columns: 350px;
   -ms-grid-rows: 250px 250px;
       grid-template-rows: 250px 250px;
       grid-template-areas: "top" "bottom";
 }
 
-.card-3-top {
+.whitepalace-top {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: top;
-  border: 1px solid red;
 }
 
-.card-3-bottom {
+.whitepalace-bottom {
   -ms-grid-row: 2;
   -ms-grid-column: 1;
   grid-area: bottom;
-  border: 1px solid red;
 }
 
-.card-4 {
+.luxuryplace {
   -ms-grid-row: 2;
   -ms-grid-column: 2;
-  grid-area: card-4;
+  grid-area: luxuryplace;
   grid-auto-columns: 350px;
   -ms-grid-rows: 250px 250px;
       grid-template-rows: 250px 250px;
       grid-template-areas: "top" "bottom";
 }
 
-.card-4-top {
+.luxuryplace-top {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: top;
 }
 
-.card-4-bottom {
+.luxuryplace-bottom {
   -ms-grid-row: 2;
   -ms-grid-column: 1;
   grid-area: bottom;
 }
 
-.card-5 {
+.fivestar {
   -ms-grid-row: 2;
   -ms-grid-column: 3;
-  grid-area: card-5;
+  grid-area: fivestar;
   grid-auto-columns: 350px;
   -ms-grid-rows: 250px 250px;
       grid-template-rows: 250px 250px;
       grid-template-areas: "top" "bottom";
 }
 
-.card-5-top {
+.fivestar-top {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: top;
 }
 
-.card-5-bottom {
+.fivestar-bottom {
   -ms-grid-row: 2;
   -ms-grid-column: 1;
   grid-area: bottom;
@@ -1292,27 +1289,6 @@ template {
 
 .stars {
   margin-bottom: 5px;
-}
-
-.price {
-  display: block;
-}
-
-.price__old {
-  margin-bottom: 5px;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 18px;
-  -webkit-text-decoration-line: line-through;
-          text-decoration-line: line-through;
-}
-
-.price__new {
-  font-style: normal;
-  font-weight: bold;
-  font-size: 24px;
-  line-height: 30px;
 }
 
 .advice {
@@ -1398,25 +1374,6 @@ template {
   line-height: 22px;
 }
 
-.advice-bottom__button {
-  position: absolute;
-  z-index: 10;
-  right: 21px;
-  bottom: 30px;
-  padding: 10px 26px;
-  border: none;
-  outline: none;
-  border-radius: 4px;
-  background-color: #EC1F46;
-  color: #fff;
-  font-family: Nunito;
-  font-style: normal;
-  font-weight: 600;
-  font-size: 14px;
-  line-height: 19px;
-  cursor: pointer;
-}
-
 .room {
   margin-bottom: 24px;
 }
@@ -1439,6 +1396,60 @@ template {
 
 .room__icon {
   margin-right: 14px;
+}
+
+.wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: end;
+}
+
+.wrap-price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.wrap-price__old {
+  margin-bottom: 5px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+  -webkit-text-decoration-line: line-through;
+          text-decoration-line: line-through;
+}
+
+.wrap-price__new {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 30px;
+}
+
+.wrap__button {
+  padding: 10px 26px;
+  border: none;
+  outline: none;
+  border-radius: 4px;
+  background-color: #EC1F46;
+  color: #fff;
+  font-family: Nunito;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 19px;
+  cursor: pointer;
 }
 
 @media (max-width: 1200px) {

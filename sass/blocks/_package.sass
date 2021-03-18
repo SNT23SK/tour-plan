@@ -13,21 +13,20 @@
   grid-template-columns: 350px 350px 350px
   grid-template-rows: 500px 500px
   gap: 30px 30px
-  grid-template-areas: "card-1 card-1 card-2""card-3 card-4 card-5"
+  grid-template-areas: "blueheaven blueheaven bellemare""whitepalace luxuryplace fivestar"
   color: $light
   margin-bottom: 70px
-.card-1
-  grid-area: card-1
+.blueheaven
+  grid-area: blueheaven
   grid-template-columns: 1fr 1fr
   grid-auto-rows: 500px
   grid-template-areas: "left right"
   &-left
     grid-area: left
-    position: relative
   &-right
     grid-area: right
-.card-2
-  grid-area: card-2
+.bellemare
+  grid-area: bellemare
   grid-auto-columns: 350px
   grid-template-rows: 250px 250px
   grid-template-areas: "top""bottom"
@@ -35,19 +34,8 @@
     grid-area: top
   &-bottom
     grid-area: bottom
-.card-3
-  grid-area: card-3
-  grid-auto-columns: 350px
-  grid-template-rows: 250px 250px
-  grid-template-areas: "top""bottom"
-  &-top
-    grid-area: top
-    border: 1px solid red
-  &-bottom
-    grid-area: bottom
-    border: 1px solid red
-.card-4
-  grid-area: card-4
+.whitepalace
+  grid-area: whitepalace
   grid-auto-columns: 350px
   grid-template-rows: 250px 250px
   grid-template-areas: "top""bottom"
@@ -55,8 +43,17 @@
     grid-area: top
   &-bottom
     grid-area: bottom
-.card-5
-  grid-area: card-5
+.luxuryplace
+  grid-area: luxuryplace
+  grid-auto-columns: 350px
+  grid-template-rows: 250px 250px
+  grid-template-areas: "top""bottom"
+  &-top
+    grid-area: top
+  &-bottom
+    grid-area: bottom
+.fivestar
+  grid-area: fivestar
   grid-auto-columns: 350px
   grid-template-rows: 250px 250px
   grid-template-areas: "top""bottom"
@@ -67,20 +64,7 @@
 
 .stars
   margin-bottom: 5px
-.price
-  display: block
-  &__old
-    margin-bottom: 5px
-    font-style: normal
-    font-weight: normal
-    font-size: 14px
-    line-height: 18px
-    text-decoration-line: line-through
-  &__new
-    font-style: normal
-    font-weight: bold
-    font-size: 24px
-    line-height: 30px
+
 .advice
   display: grid
   border-radius: 8px
@@ -140,23 +124,6 @@
       font-weight: normal
       font-size: 14px
       line-height: 22px
-    &__button
-      position: absolute
-      z-index: 10
-      right: 21px
-      bottom: 30px
-      padding: 10px 26px
-      border: none
-      outline: none
-      border-radius: 4px
-      background-color: $primary
-      color: $light
-      font-family: Nunito
-      font-style: normal
-      font-weight: 600
-      font-size: 14px
-      line-height: 19px
-      cursor: pointer
 .room
   margin-bottom: 24px
   &_main
@@ -171,3 +138,36 @@
     vertical-align: top
   &__icon
     margin-right: 14px
+.wrap
+  display: flex
+  justify-content: space-between
+  align-items: end
+  &-price
+    display: flex
+    flex-direction: column
+    &__old
+      margin-bottom: 5px
+      font-style: normal
+      font-weight: normal
+      font-size: 14px
+      line-height: 18px
+      text-decoration-line: line-through
+    &__new
+      font-style: normal
+      font-weight: bold
+      font-size: 24px
+      line-height: 30px
+  &-button
+  &__button
+    padding: 10px 26px
+    border: none
+    outline: none
+    border-radius: 4px
+    background-color: $primary
+    color: $light
+    font-family: Nunito
+    font-style: normal
+    font-weight: 600
+    font-size: 14px
+    line-height: 19px
+    cursor: pointer
