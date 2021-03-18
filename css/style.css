@@ -1166,8 +1166,8 @@ template {
 .grid-container {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 350px 350px 350px;
-      grid-template-columns: 350px 350px 350px;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
   -ms-grid-rows: 500px 500px;
       grid-template-rows: 500px 500px;
   gap: 30px 30px;
@@ -1177,114 +1177,56 @@ template {
 }
 
 .blueheaven {
+  display: -ms-grid;
+  display: grid;
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   -ms-grid-column-span: 2;
   grid-area: blueheaven;
-  -ms-grid-columns: 1fr 1fr;
-      grid-template-columns: 1fr 1fr;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
   grid-auto-rows: 500px;
-      grid-template-areas: "left right";
-}
-
-.blueheaven-left {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
-  grid-area: left;
-}
-
-.blueheaven-right {
-  -ms-grid-row: 1;
-  -ms-grid-column: 2;
-  grid-area: right;
+      grid-template-areas: "top bottom";
 }
 
 .bellemare {
   -ms-grid-row: 1;
   -ms-grid-column: 3;
   grid-area: bellemare;
-  grid-auto-columns: 350px;
+  grid-auto-columns: 1fr;
   -ms-grid-rows: 250px 250px;
       grid-template-rows: 250px 250px;
       grid-template-areas: "top" "bottom";
-}
-
-.bellemare-top {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
-  grid-area: top;
-}
-
-.bellemare-bottom {
-  -ms-grid-row: 2;
-  -ms-grid-column: 1;
-  grid-area: bottom;
 }
 
 .whitepalace {
   -ms-grid-row: 2;
   -ms-grid-column: 1;
   grid-area: whitepalace;
-  grid-auto-columns: 350px;
+  grid-auto-columns: 1fr;
   -ms-grid-rows: 250px 250px;
       grid-template-rows: 250px 250px;
       grid-template-areas: "top" "bottom";
-}
-
-.whitepalace-top {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
-  grid-area: top;
-}
-
-.whitepalace-bottom {
-  -ms-grid-row: 2;
-  -ms-grid-column: 1;
-  grid-area: bottom;
 }
 
 .luxuryplace {
   -ms-grid-row: 2;
   -ms-grid-column: 2;
   grid-area: luxuryplace;
-  grid-auto-columns: 350px;
+  grid-auto-columns: 1fr;
   -ms-grid-rows: 250px 250px;
       grid-template-rows: 250px 250px;
       grid-template-areas: "top" "bottom";
-}
-
-.luxuryplace-top {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
-  grid-area: top;
-}
-
-.luxuryplace-bottom {
-  -ms-grid-row: 2;
-  -ms-grid-column: 1;
-  grid-area: bottom;
 }
 
 .fivestar {
   -ms-grid-row: 2;
   -ms-grid-column: 3;
   grid-area: fivestar;
-  grid-auto-columns: 350px;
+  grid-auto-columns: 1fr;
   -ms-grid-rows: 250px 250px;
       grid-template-rows: 250px 250px;
       grid-template-areas: "top" "bottom";
-}
-
-.fivestar-top {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
-  grid-area: top;
-}
-
-.fivestar-bottom {
-  -ms-grid-row: 2;
-  -ms-grid-column: 1;
-  grid-area: bottom;
 }
 
 .stars {
@@ -1296,10 +1238,6 @@ template {
   display: grid;
   border-radius: 8px;
   overflow: hidden;
-}
-
-.advice-top {
-  position: relative;
 }
 
 .advice-top__image {
@@ -1345,7 +1283,6 @@ template {
 .advice-bottom {
   background-color: #0A223D;
   padding: 30px 32px;
-  position: relative;
 }
 
 .advice-bottom_main {
@@ -1469,6 +1406,12 @@ template {
     width: 230px;
     height: 230px;
   }
+  .grid-container {
+    gap: 20px 20px;
+  }
+  .advice-bottom {
+    padding: 28px 32px;
+  }
 }
 
 @media (max-width: 992px) {
@@ -1543,6 +1486,14 @@ template {
     width: 48.5%;
     height: 250px;
   }
+  .grid-container {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    -ms-grid-rows: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    gap: 20px 20px;
+        grid-template-areas: "blueheaven blueheaven" "bellemare whitepalace" "luxuryplace fivestar";
+  }
 }
 
 @media (max-width: 768px) {
@@ -1576,6 +1527,9 @@ template {
     width: 16px;
     height: 1px;
     background-color: #333333;
+  }
+  .hotel {
+    margin-bottom: 55px;
   }
   .hotel__slider {
     width: 100%;
@@ -1621,6 +1575,13 @@ template {
   .map {
     width: 100%;
   }
+  .reviews {
+    padding: 40px 60px;
+  }
+  .reviews__title {
+    font-size: 30px;
+    line-height: 38px;
+  }
   .reviews-slider__item {
     padding: 0 30px 30px;
   }
@@ -1642,23 +1603,47 @@ template {
     -webkit-transform: translate(50%, 0);
             transform: translate(50%, 0);
   }
-}
-
-.activities {
-  padding-top: 40px;
-  padding-bottom: 60px;
-}
-
-.activities__title {
-  margin-bottom: 57px;
-}
-
-.card {
-  height: 255px;
-}
-
-.card__title {
-  margin-left: 0;
+  .activities {
+    padding-top: 40px;
+    padding-bottom: 60px;
+  }
+  __title {
+    margin-bottom: 57px;
+  }
+  __title {
+    margin-left: 0;
+  }
+  .package__title {
+    font-size: 30px;
+    line-height: 38px;
+    margin-bottom: 35px;
+  }
+  .room-main {
+    margin-bottom: 30px;
+  }
+  .room__icon {
+    margin-right: 9px;
+  }
+  .advice-bottom {
+    padding: 20px 24px;
+  }
+  .advice-bottom__title_main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-bottom: 22px;
+  }
+  .advice-bottom__depiction {
+    margin-bottom: 30px;
+    line-height: 20px;
+  }
+  .wrap__button {
+    padding: 8px 20px;
+  }
 }
 
 @media (max-width: 576px) {
@@ -1699,6 +1684,30 @@ template {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+  }
+  .grid-container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-areas: "blueheaven" "bellemare" "whitepalace" "luxuryplace" "fivestar";
+  }
+  .advice-bottom__depiction {
+    display: none;
+  }
+  .wrap_main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
   }
 }
 /*# sourceMappingURL=style.css.map */

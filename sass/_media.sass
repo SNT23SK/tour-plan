@@ -13,6 +13,11 @@
   .card
     width: 230px
     height: 230px
+  .grid-container
+    gap: 20px 20px
+  .advice
+    &-bottom
+      padding: 28px 32px
 @media  ( max-width: 992px )
   .container,
   .newsletter-wrapper
@@ -62,6 +67,11 @@
   .card
     width: 48.5%
     height: 250px
+  .grid-container
+    grid-template-columns: 1fr 1fr
+    grid-template-rows: 1fr 1fr 1fr
+    gap: 20px 20px
+    grid-template-areas: "blueheaven blueheaven" "bellemare whitepalace" "luxuryplace fivestar"
 @media ( max-width: 768px )
   .container
     max-width: 90%
@@ -84,6 +94,7 @@
         height: 1px
         background-color: $text-color
   .hotel
+    margin-bottom: 55px
     &__slider
       width: 100%
     &-wrapper
@@ -111,6 +122,10 @@
   .map
     width: 100%
   .reviews
+    padding: 40px 60px
+    &__title
+      font-size: 30px
+      line-height: 38px
     &-slider
       &__item
         padding: 0 30px 30px
@@ -126,16 +141,40 @@
           right: 50%
           margin-right: -65px
           transform: translate(50%,0)
-.activities
-  padding-top: 40px
-  padding-bottom: 60px
+  .activities
+    padding-top: 40px
+    padding-bottom: 60px
   &__title
     margin-bottom: 57px
-.card
+  .card
   // width: 48%
-  height: 255px
+    height: 255px
   &__title
     margin-left: 0
+  .package
+    &__title
+      font-size: 30px
+      line-height: 38px
+      margin-bottom: 35px
+  .room
+    &-main
+      margin-bottom: 30px
+    &__icon
+      margin-right: 9px
+  .advice
+    &-bottom
+      padding: 20px 24px
+      &__title
+        &_main
+          display: flex
+          flex-direction: column
+          margin-bottom: 22px
+      &__depiction
+        margin-bottom: 30px
+        line-height: 20px
+  .wrap
+    &__button
+      padding: 8px 20px
 @media ( max-width: 576px )
   .logo
     width: 99px
@@ -157,7 +196,6 @@
     width: 100%
   .card
     width: 100%
-
     height: 255px
   .activities
     &__title
@@ -165,3 +203,17 @@
     &-wrapper
       flex-direction: column
       align-items: center
+  .grid-container
+    display: grid
+    grid-template-columns: 1fr
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr
+    grid-template-areas: "blueheaven" "bellemare" "whitepalace" "luxuryplace" "fivestar"
+  .advice
+    &-top
+    &-bottom
+      &__depiction
+        display: none
+  .wrap_main
+    display: flex
+    flex-direction: column
+    align-items: start
