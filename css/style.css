@@ -1128,7 +1128,7 @@ template {
 }
 
 .card__title {
-  margin: auto;
+  margin-top: auto;
   z-index: 2;
   color: #fff;
   margin-bottom: 18px;
