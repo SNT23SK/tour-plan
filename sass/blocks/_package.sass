@@ -1,0 +1,178 @@
+.package
+  &__title
+    font-style: normal
+    font-weight: bold
+    font-size: 36px
+    line-height: 45px
+    text-align: center
+    text-transform: uppercase
+    margin-top: 0
+    margin-bottom: 65px
+.grid-container
+  display: grid
+  grid-template-columns: 1fr 1fr 1fr
+  grid-template-rows: 500px 500px
+  gap: 30px 30px
+  grid-template-areas: "blueheaven blueheaven bellemare""whitepalace luxuryplace fivestar"
+  color: $light
+  margin-bottom: 70px
+.blueheaven
+  display: grid
+  grid-area: blueheaven
+  grid-template-columns: repeat(2, 1fr)
+  grid-auto-rows: 500px
+  grid-template-areas: "top bottom"
+  .top
+    grid-area: top
+    .bottom
+      grid-area: bottom
+.bellemare
+  grid-area: bellemare
+  grid-auto-columns: 1fr
+  grid-template-rows: 250px 250px
+  grid-template-areas: "top""bottom"
+  .top
+    grid-area: top
+  .bottom
+    grid-area: bottom
+.whitepalace
+  grid-area: whitepalace
+  grid-auto-columns: 1fr
+  grid-template-rows: 250px 250px
+  grid-template-areas: "top""bottom"
+  .top
+    grid-area: top
+  .bottom
+    grid-area: bottom
+.luxuryplace
+  grid-area: luxuryplace
+  grid-auto-columns: 1fr
+  grid-template-rows: 250px 250px
+  grid-template-areas: "top""bottom"
+  .top
+    grid-area: top
+  .bottom
+    grid-area: bottom
+.fivestar
+  grid-area: fivestar
+  grid-auto-columns: 1fr
+  grid-template-rows: 250px 250px
+  grid-template-areas: "top""bottom"
+.stars
+  margin-bottom: 5px
+.advice
+  display: grid
+  border-radius: 8px
+  overflow: hidden
+  &-top
+    position: relative
+    &__image
+      width: 100%
+      height: 100%
+      object-fit: cover
+    &__offer
+      position: absolute
+      z-index: 10
+      border: none
+      outline: none
+      border-radius: 0 4px 4px 0
+      background-color: $primary
+      color: $light
+      font-weight: 600
+      font-style: normal
+      cursor: pointer
+      &_big
+        padding: 8px 12px
+        top: 26px
+        left: 0
+        width: 95px
+        height: 30px
+        font-size: 12px
+        line-height: 15px
+      &_small
+        padding: 4px 8px
+        top: 13px
+        left: 0
+        width: 60px
+        height: 18px
+        font-size: 8px
+        line-height: 10px
+  &-bottom
+    background-color: $dark
+    padding: 30px 32px
+    &_main
+      padding: 47px 21px 35px 44px
+    &__title
+      margin-top: 0
+      margin-bottom: 23px
+      font-style: normal
+      font-weight: bold
+      font-size: 18px
+      line-height: 23px
+    // position: relative
+
+.right-wrapper
+  &__title
+    margin-top: 0
+    margin-bottom: 23px
+    font-style: normal
+    font-weight: bold
+    font-size: 18px
+    line-height: 23px
+    &_main
+      margin-bottom: 27px
+  &__depiction
+    margin-top: 0
+    margin-bottom: 34px
+    font-style: normal
+    font-weight: normal
+    font-size: 14px
+    line-height: 22px
+.room
+  margin-bottom: 24px
+  &_main
+    margin-bottom: 34px
+  &-info
+    margin-bottom: 11px
+    font-style: normal
+    font-weight: normal
+    font-size: 12px
+    line-height: 15px
+    &__text
+      vertical-align: top
+    &__icon
+      margin-right: 14px
+.wrap
+  display: flex
+  justify-content: space-between
+  align-items: end
+  &-price
+    display: flex
+    flex-direction: column
+    &__old
+      margin-bottom: 5px
+      font-style: normal
+      font-weight: normal
+      font-size: 14px
+      line-height: 18px
+      text-decoration-line: line-through
+    &__new
+      font-style: normal
+      font-weight: bold
+      font-size: 24px
+      line-height: 30px
+  &__button
+    margin-top: auto
+    padding: 10px 26px
+    border: none
+    outline: none
+    border-radius: 4px
+    background-color: $primary
+    color: $light
+    font-family: Nunito
+    font-style: normal
+    font-weight: 600
+    font-size: 14px
+    line-height: 19px
+    cursor: pointer
+    type: button

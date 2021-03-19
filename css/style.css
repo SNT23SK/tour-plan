@@ -517,7 +517,7 @@ template {
 
 .hotel {
   margin-top: 23px;
-  margin-bottom: 70px;
+  margin-bottom: 110px;
 }
 
 .hotel-info {
@@ -653,6 +653,11 @@ template {
       flex-basis: 100%;
 }
 
+.five {
+  font-size: 10px;
+  line-height: 12.5px;
+}
+
 .offer {
   font-size: 10px;
   line-height: 13px;
@@ -680,11 +685,6 @@ template {
   font-size: 14px;
   line-height: 17.5px;
   font-weight: bold;
-}
-
-.five {
-  font-size: 10px;
-  line-height: 12.5px;
 }
 
 .booking {
@@ -819,7 +819,6 @@ template {
 .map {
   width: 347px;
   height: 213px;
-  background-color: black;
   border-radius: 10px;
   overflow: hidden;
 }
@@ -1129,7 +1128,7 @@ template {
 }
 
 .card__title {
-  margin: auto;
+  margin-top: auto;
   z-index: 2;
   color: #fff;
   margin-bottom: 18px;
@@ -1153,6 +1152,306 @@ template {
   cursor: pointer;
 }
 
+.package__title {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 45px;
+  text-align: center;
+  text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 65px;
+}
+
+.grid-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  -ms-grid-rows: 500px 500px;
+      grid-template-rows: 500px 500px;
+  gap: 30px 30px;
+      grid-template-areas: "blueheaven blueheaven bellemare" "whitepalace luxuryplace fivestar";
+  color: #fff;
+  margin-bottom: 70px;
+}
+
+.blueheaven {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: blueheaven;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: 500px;
+      grid-template-areas: "top bottom";
+}
+
+.blueheaven .top {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: top;
+}
+
+.blueheaven .top .bottom {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: bottom;
+}
+
+.bellemare {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: bellemare;
+  grid-auto-columns: 1fr;
+  -ms-grid-rows: 250px 250px;
+      grid-template-rows: 250px 250px;
+      grid-template-areas: "top" "bottom";
+}
+
+.bellemare .top {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: top;
+}
+
+.bellemare .bottom {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: bottom;
+}
+
+.whitepalace {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: whitepalace;
+  grid-auto-columns: 1fr;
+  -ms-grid-rows: 250px 250px;
+      grid-template-rows: 250px 250px;
+      grid-template-areas: "top" "bottom";
+}
+
+.whitepalace .top {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: top;
+}
+
+.whitepalace .bottom {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: bottom;
+}
+
+.luxuryplace {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: luxuryplace;
+  grid-auto-columns: 1fr;
+  -ms-grid-rows: 250px 250px;
+      grid-template-rows: 250px 250px;
+      grid-template-areas: "top" "bottom";
+}
+
+.luxuryplace .top {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: top;
+}
+
+.luxuryplace .bottom {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: bottom;
+}
+
+.fivestar {
+  -ms-grid-row: 2;
+  -ms-grid-column: 3;
+  grid-area: fivestar;
+  grid-auto-columns: 1fr;
+  -ms-grid-rows: 250px 250px;
+      grid-template-rows: 250px 250px;
+      grid-template-areas: "top" "bottom";
+}
+
+.stars {
+  margin-bottom: 5px;
+}
+
+.advice {
+  display: -ms-grid;
+  display: grid;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.advice-top {
+  position: relative;
+}
+
+.advice-top__image {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.advice-top__offer {
+  position: absolute;
+  z-index: 10;
+  border: none;
+  outline: none;
+  border-radius: 0 4px 4px 0;
+  background-color: #EC1F46;
+  color: #fff;
+  font-weight: 600;
+  font-style: normal;
+  cursor: pointer;
+}
+
+.advice-top__offer_big {
+  padding: 8px 12px;
+  top: 26px;
+  left: 0;
+  width: 95px;
+  height: 30px;
+  font-size: 12px;
+  line-height: 15px;
+}
+
+.advice-top__offer_small {
+  padding: 4px 8px;
+  top: 13px;
+  left: 0;
+  width: 60px;
+  height: 18px;
+  font-size: 8px;
+  line-height: 10px;
+}
+
+.advice-bottom {
+  background-color: #0A223D;
+  padding: 30px 32px;
+}
+
+.advice-bottom_main {
+  padding: 47px 21px 35px 44px;
+}
+
+.advice-bottom__title {
+  margin-top: 0;
+  margin-bottom: 23px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 23px;
+}
+
+.right-wrapper__title {
+  margin-top: 0;
+  margin-bottom: 23px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 23px;
+}
+
+.right-wrapper__title_main {
+  margin-bottom: 27px;
+}
+
+.right-wrapper__depiction {
+  margin-top: 0;
+  margin-bottom: 34px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+.room {
+  margin-bottom: 24px;
+}
+
+.room_main {
+  margin-bottom: 34px;
+}
+
+.room-info {
+  margin-bottom: 11px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 15px;
+}
+
+.room-info__text {
+  vertical-align: top;
+}
+
+.room-info__icon {
+  margin-right: 14px;
+}
+
+.wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: end;
+}
+
+.wrap-price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.wrap-price__old {
+  margin-bottom: 5px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+  -webkit-text-decoration-line: line-through;
+          text-decoration-line: line-through;
+}
+
+.wrap-price__new {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 30px;
+}
+
+.wrap__button {
+  margin-top: auto;
+  padding: 10px 26px;
+  border: none;
+  outline: none;
+  border-radius: 4px;
+  background-color: #EC1F46;
+  color: #fff;
+  font-family: Nunito;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 19px;
+  cursor: pointer;
+  type: button;
+}
+
 @media (max-width: 1200px) {
   .container {
     max-width: 960px;
@@ -1169,6 +1468,12 @@ template {
   .card {
     width: 230px;
     height: 230px;
+  }
+  .grid-container {
+    gap: 20px 20px;
+  }
+  .advice-bottom {
+    padding: 28px 32px;
   }
 }
 
@@ -1244,6 +1549,14 @@ template {
     width: 48.5%;
     height: 250px;
   }
+  .grid-container {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    -ms-grid-rows: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    gap: 20px 20px;
+        grid-template-areas: "blueheaven blueheaven" "bellemare whitepalace" "luxuryplace fivestar";
+  }
 }
 
 @media (max-width: 768px) {
@@ -1277,6 +1590,9 @@ template {
     width: 16px;
     height: 1px;
     background-color: #333333;
+  }
+  .hotel {
+    margin-bottom: 60px;
   }
   .hotel__slider {
     width: 100%;
@@ -1312,9 +1628,20 @@ template {
   .booking {
     margin-right: 20px;
     width: 100%;
+    height: -webkit-min-content;
+    height: -moz-min-content;
+    height: min-content;
+    margin-right: 20px;
   }
   .map {
     width: 100%;
+  }
+  .reviews {
+    padding: 40px 60px;
+  }
+  .reviews__title {
+    font-size: 30px;
+    line-height: 38px;
   }
   .reviews-slider__item {
     padding: 0 30px 30px;
@@ -1337,23 +1664,47 @@ template {
     -webkit-transform: translate(50%, 0);
             transform: translate(50%, 0);
   }
-}
-
-.activities {
-  padding-top: 40px;
-  padding-bottom: 60px;
-}
-
-.activities__title {
-  margin-bottom: 57px;
-}
-
-.card {
-  height: 255px;
-}
-
-.card__title {
-  margin-left: 0;
+  .activities {
+    padding-top: 40px;
+    padding-bottom: 60px;
+  }
+  __title {
+    margin-bottom: 57px;
+  }
+  __title {
+    margin-left: 0;
+  }
+  .package__title {
+    font-size: 30px;
+    line-height: 38px;
+    margin-bottom: 35px;
+  }
+  .room-main {
+    margin-bottom: 30px;
+  }
+  .room__icon {
+    margin-right: 9px;
+  }
+  .advice-bottom {
+    padding: 20px 24px;
+  }
+  .advice-bottom__title_main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-bottom: 22px;
+  }
+  .advice-bottom__depiction {
+    margin-bottom: 30px;
+    line-height: 20px;
+  }
+  .wrap__button {
+    padding: 8px 20px;
+  }
 }
 
 @media (max-width: 576px) {
@@ -1407,6 +1758,28 @@ template {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+  }
+  .grid-container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: (500px)[5];
+        grid-template-rows: repeat(5, 500px);
+        grid-template-areas: "blueheaven" "bellemare" "whitepalace" "luxuryplace" "fivestar";
+  }
+  .blueheaven {
+    display: block;
+  }
+  .right-wrapper__depiction {
+    display: none;
+  }
+  .stars {
+    display: none;
+  }
+  .advice-top__image {
+    display: block;
+    height: 250px;
   }
 }
 /*# sourceMappingURL=style.css.map */
