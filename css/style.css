@@ -1671,6 +1671,9 @@ template {
   __title {
     margin-bottom: 57px;
   }
+  .card {
+    height: 255px;
+  }
   __title {
     margin-left: 0;
   }
