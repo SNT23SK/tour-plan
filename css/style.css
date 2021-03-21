@@ -2083,6 +2083,12 @@ template {
   }
   .footer__message {
     margin-bottom: 15px;
+    -ms-flex-preferred-size: 95%;
+        flex-basis: 95%;
+  }
+  .footer__input {
+    -ms-flex-preferred-size: 95%;
+        flex-basis: 95%;
   }
   .footer__info {
     -ms-flex-preferred-size: 100%;
