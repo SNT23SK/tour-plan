@@ -823,6 +823,10 @@ template {
   overflow: hidden;
 }
 
+.map__size {
+  width: 100%;
+}
+
 .swiper-container {
   margin-left: 0;
 }
