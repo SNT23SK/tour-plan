@@ -52,3 +52,10 @@ $(document).ready(function () {
 		speed: "0.2",
 	});
 });
+
+// Мобильное меню
+var menuButton = document.querySelector(".menu-button");
+menuButton.addEventListener("click", function () {
+	console.log("Клик по кнопке");
+	document.querySelector(".navbar-bottom").classList.toggle("navbar-bottom_visible");
+});
