@@ -1606,6 +1606,7 @@ template {
   border: none;
   padding: 0 23px;
   height: 50px;
+  outline: none;
   margin-bottom: 15px;
   -ms-flex-preferred-size: 48%;
       flex-basis: 48%;
@@ -1620,6 +1621,7 @@ template {
   max-width: 600px;
   height: 123px;
   margin-bottom: 23px;
+  outline: none;
   resize: none;
 }
 
