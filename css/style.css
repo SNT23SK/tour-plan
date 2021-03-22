@@ -1634,6 +1634,7 @@ template {
   color: #fff;
   background-color: #EC1F46;
   border: none;
+  outline: none;
   border-radius: 4px;
 }
 
