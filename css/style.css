@@ -1677,10 +1677,11 @@ template {
           flex-direction: row;
   -webkit-box-pack: end;
       -ms-flex-pack: end;
-          justify-content: end;
+          justify-content: flex-end;
 }
 
 .basement-text {
+  display: block;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
@@ -1695,6 +1696,12 @@ template {
 
 .basement-text__item {
   margin-right: 10px;
+}
+
+.basement__logo {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 
 .modal__overlay {
