@@ -89,6 +89,10 @@ $(document).ready(function () {
 			removeModalClass();
 		}
 	});
+
+	// маски
+	$(".phone").mask("+7(999)999-99-99", { placeholder: "+7(999)999-99-99" });
+
 	// обработка форм
 	$(".form").each(function () {
 		$(this).validate({

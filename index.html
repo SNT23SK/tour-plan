@@ -472,12 +472,13 @@
 					<span class="newsletter-title__strong">Newsletter</span>
 				</h2>
 				<!--  -->
-				<form action="send.php" method="POST" class="subscribe newsletter__subscribe">
+				<form action="send.php" method="POST" class="subscribe newsletter__subscribe form">
 					<input
 						class="input subscribe__input"
-						type="text"
+						type="email"
 						placeholder="Your email address"
 						name="email"
+						required
 					/>
 					<button class="button subscribe__button" type="submit">Send</button>
 				</form>
@@ -885,7 +886,7 @@
 							<div class="footer__input-group">
 								<input
 									type="phone"
-									class="input footer__input"
+									class="input footer__input phone"
 									placeholder="Phone Number*"
 									name="phone"
 									required
@@ -941,7 +942,7 @@
 					/>
 					<input
 						type="tel"
-						class="input modal__input"
+						class="input modal__input phone"
 						placeholder="Phone Number*"
 						name="phone"
 						required
@@ -964,6 +965,7 @@
 		<script src="js/parallax.min.js"></script>
 		<script src="js/swiper-bundle.min.js"></script>
 		<script src="js/jquery.validate.min.js"></script>
+		<script src="js/jquery.mask.min.js"></script>
 		<script src="js/main.js"></script>
 	</body>
 </html>
