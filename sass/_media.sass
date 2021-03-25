@@ -119,6 +119,7 @@
           display: none
         &_visible
           display: flex
+          width: 80%
     &__user
       flex-direction: column
       justify-content: center
@@ -253,6 +254,17 @@
   .footer
     &__input
       flex-basis: 100%
+  .basement
+    &-wrapper
+      justify-content: space-between
+  .modal
+    &__dialog
+      width: 120%
+    &__button
+      order: 1
+      width: 100%
+    &__info
+      margin-bottom: 10px
       // _________________________________________________________________________________________________
 @media ( max-width: 576px )
   .logo
@@ -308,6 +320,7 @@
         display: block
         height: 250px
   .footer
+    padding-bottom: 30px
     &-wrapper
       grid-template-columns: 1fr
     &__logo
@@ -346,3 +359,13 @@
       margin-bottom: 15px
     &__button
       order: 1
+  .basement
+    padding: 0px 0 21px 0
+    &-wrapper
+      flex-direction: column
+    &-text
+      align-self: start
+      margin-bottom: 10px
+  .modal
+    &__info
+      margin-bottom: 10px
