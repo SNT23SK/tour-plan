@@ -113,5 +113,16 @@ $(document).ready(function () {
 			},
 		});
 	});
+
+	// оптимизация загрузки карты
+	let map = document.querySelector(".map-frame");
+	map.addEventListener("mouseover", initMap);
+	function initMap() {
+		if (map.getAttribute("data-src")) {
+			map.setAttribute("src", map.getAttribute("data-src"));
+		}
+		map.removeEventListener("mouseover", initMap);
+	}
+	// подключение эффектов
 	AOS.init();
 });
