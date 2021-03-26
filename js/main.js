@@ -124,5 +124,7 @@ $(document).ready(function () {
 		map.removeEventListener("mouseover", initMap);
 	}
 	// подключение эффектов
-	AOS.init();
+	AOS.init({
+		disable: "mobile",
+	});
 });

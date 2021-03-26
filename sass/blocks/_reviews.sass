@@ -1,10 +1,11 @@
 .reviews
-  padding: 40px 0 70px 0
+  padding: 40px 0 72px 0
   &__title
     font-style: normal
     font-weight: bold
     font-size: 36px
     line-height: 45px
+    letter-spacing: 0.3px
     text-align: center
     text-transform: uppercase
     margin-bottom: 70px
@@ -24,7 +25,7 @@
         position: absolute
         left: 62px
         top: 13px
-        background-image: url(../img/quote-left.svg)
+        background-image: url(../img/quote-right.svg)
         background-repeat: no-repeat
         width: 70px
         height: 47.5px
@@ -33,13 +34,13 @@
         position: absolute
         right: 62px
         top: 118px
-        background-image: url(../img/quote-right.svg)
+        background-image: url(../img/quote-left.svg)
         background-repeat: no-repeat
         width: 70px
         height: 47.5px
     &__button
       position: absolute
-      top: 50%
+      top: 42%
       transform: transateY(-50%)
       width: 30px
       height: 30px
@@ -53,16 +54,16 @@
       z-index: 20
       &--prev
         background-image: url(../img/arrow-prev-secondary.svg)
-        left: 0
+        left: 20px
       &--next
         background-image: url(../img/arrow-next-secondary.svg)
-        right: 0
+        right: 20px
     &__profile
       display: flex
       flex-direction: column
       align-items: center
       margin-top: -45px
-      margin-bottom: 30px
+      margin-bottom: 32px
     &__avatar
       width: 90px
       height: 90px

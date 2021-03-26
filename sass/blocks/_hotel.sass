@@ -1,5 +1,5 @@
 .hotel
-  margin-top: 23px
+  margin-top: 16px
   margin-bottom: 110px
   &-info
     display: flex
@@ -13,11 +13,18 @@
       margin-top: 10px
       margin-bottom: 0
     &__desription
-      margin: 5px 0
+      font-style: normal
+      font-weight: normal
+      font-size: 12px
+      line-height: 15px
+      letter-spacing: 0.3px
+      // margin-top: 4px
   &-name
+    font-style: normal
+    font-weight: bold
     font-size: 24px
     line-height: 30px
-    font-weight: bold
+    text-transform: uppercase
   &-desription
     font-size: 12px
     line-height: 15px
@@ -76,6 +83,10 @@
         background-image: url(../img/arrow-next.svg)
 .stars
   flex-basis: 100%
+  width: 48px
+  height: 8px
+.star
+  // margin-right: 1px
 .five
   font-size: 10px
   line-height: 12.5px
@@ -95,7 +106,10 @@
   background-color: $primary
   border-radius: 4px
   &__text
+    font-style: normal
+    font-weight: 600
     font-size: 8px
+    line-height: 10px
   &__counter
     font-size: 14px
     line-height: 17.5px
