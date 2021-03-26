@@ -10,27 +10,38 @@
 		<link rel="preconnect" href="https://fonts.gstatic.com" />
 		<link
 			href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;600;700&family=Nunito:wght@400;600;700;800&display=swap"
-			rel="stylesheet"
+			rel="preload"
 		/>
 		<link rel="stylesheet" href="css/swiper-bundle.min.css" />
+		<link rel="stylesheet" href="css/aos.css" />
 		<link rel="stylesheet" href="css/style.css" />
 	</head>
 	<body>
 		<header class="navbar navbar__mobile_fixed">
 			<div class="container">
 				<div class="navbar-top">
-					<a href="#" class="logo">
+					<a href="#" class="logo" data-aos="fade-down" data-aos-delay="300">
 						<img src="img/horizont-logo.svg" alt="logo: Best Tour Plan" class="logo__image" />
 					</a>
 					<!-- /.logo -->
-					<form action="#" class="search navbar__search navbar__search_mobile_hidden">
+					<form
+						action="#"
+						class="search navbar__search navbar__search_mobile_hidden"
+						data-aos="fade-down"
+						data-aos-delay="500"
+					>
 						<input class="input search__input" type="text" placeholder="Search Location" />
 						<button class="button search__button">
 							<img src="img/search.svg" alt="Icon: search" />
 						</button>
 					</form>
 					<!-- /.form -->
-					<a href="#" class="user navbar__user navbar__user_mobile_hidden">
+					<a
+						href="#"
+						class="user navbar__user navbar__user_mobile_hidden"
+						data-aos="fade-down"
+						data-aos-delay="700"
+					>
 						<img src="img/user-avatar.jpeg" alt="Avatar: Nathan" class="avatar user__avatar" />
 						<span class="user__name">Nathan</span>
 					</a>
@@ -143,7 +154,11 @@
 				<!-- /.hotel-info -->
 				<div class="hotel-grid">
 					<!-- Slider main container -->
-					<div class="swiper-container hotel-slider hotel__slider">
+					<div
+						class="swiper-container hotel-slider hotel__slider"
+						data-aos="zoom-out-right"
+						data-aos-duration="3000"
+					>
 						<!-- Additional required wrapper -->
 						<div class="swiper-wrapper">
 							<!-- Slides -->
@@ -175,7 +190,7 @@
 					</div>
 					<!-- /.swiper-container -->
 					<div class="hotel-right">
-						<div class="booking">
+						<div class="booking" data-aos="zoom-out-left" data-aos-duration="1500">
 							<div class="booking__info">
 								<div class="booking__price">
 									<span class="booking__start"> price starts as </span>
@@ -213,15 +228,16 @@
 							<button data-toggle="modal" class="button booking__button">View Other Options</button>
 						</div>
 						<!-- /.booking -->
-						<div class="map">
+						<div class="map-google" id="map" data-aos-duration="5000">
 							<iframe
 								src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6095.661060554103!2d98.29605952712215!3d7.837635759381242!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x305025650c33dbab%3A0xa67a542329d011e1!2z0J_RhdGD0LrQtdGCLCDQmtCw0YDQvtC9LCDQntGC0LXQu9GMINCl0LjQu9GC0L7QvQ!5e0!3m2!1sru!2sru!4v1615440370311!5m2!1sru!2sru"
-								class="map__size"
+								class="map-frame"
 								width="350"
 								height="213"
 								style="border: 0"
 								allowfullscreen=""
-								loading="lazy"
+								aria-hidden="false"
+								tabindex="0"
 							></iframe>
 						</div>
 						<!-- /.map -->
@@ -236,7 +252,12 @@
 			<div class="container">
 				<h2 class="package__title">Other Packages</h2>
 				<div class="grid-container">
-					<div class="blueheaven advice">
+					<div
+						class="blueheaven advice"
+						data-aos="flip-left"
+						data-aos-easing="ease-out-cubic"
+						data-aos-duration="1500"
+					>
 						<div class="advice-top advice-top_main">
 							<img
 								src="img/advisor-card-1.jpeg"
@@ -292,7 +313,12 @@
 						</div>
 					</div>
 					<!-- /.card-1 -->
-					<div class="bellemare advice">
+					<div
+						class="bellemare advice"
+						data-aos="flip-left"
+						data-aos-easing="ease-out-cubic"
+						data-aos-duration="1500"
+					>
 						<div class="advice-top">
 							<img
 								src="img/advisor-card-2.jpeg"
@@ -334,7 +360,12 @@
 						<!-- advice-botom -->
 					</div>
 					<!-- /.card-2 -->
-					<div class="whitepalace advice">
+					<div
+						class="whitepalace advice"
+						data-aos="flip-left"
+						data-aos-easing="ease-out-cubic"
+						data-aos-duration="3000"
+					>
 						<div class="advice-top">
 							<img
 								src="img/advisor-card-3.jpeg"
@@ -376,7 +407,12 @@
 						<!-- advice-botom -->
 					</div>
 					<!-- /.card-3 -->
-					<div class="luxuryplace advice">
+					<div
+						class="luxuryplace advice"
+						data-aos="flip-left"
+						data-aos-easing="ease-out-cubic"
+						data-aos-duration="3000"
+					>
 						<div class="advice-top">
 							<img
 								src="img/advisor-card-4.jpeg"
@@ -418,7 +454,12 @@
 						<!-- advice-botom -->
 					</div>
 					<!-- /.card-4 -->
-					<div class="fivestar advice">
+					<div
+						class="fivestar advice"
+						data-aos="flip-left"
+						data-aos-easing="ease-out-cubic"
+						data-aos-duration="3000"
+					>
 						<div class="advice-top">
 							<img
 								src="img/advisor-card-5.jpeg"
@@ -467,20 +508,30 @@
 		<!-- /.package -->
 		<section class="newsletter">
 			<div class="newsletter-wrapper">
-				<h2 class="newsletter-title newsletter__title">
+				<h2
+					class="newsletter-title newsletter__title"
+					data-aos="fade-right"
+					data-aos-duration="1000"
+				>
 					subscribe to our
 					<span class="newsletter-title__strong">Newsletter</span>
 				</h2>
 				<!--  -->
-				<form action="send.php" method="POST" class="subscribe newsletter__subscribe form">
+				<form
+					action="send.php"
+					method="POST"
+					class="form newsletter__form"
+					data-aos="fade-left"
+					data-aos-duration="2000"
+				>
 					<input
-						class="input subscribe__input"
+						class="input newsletter__input"
 						type="email"
 						placeholder="Your email address"
 						name="email"
 						required
 					/>
-					<button class="button subscribe__button" type="submit">Send</button>
+					<button class="button newsletter__button" type="submit">Send</button>
 				</form>
 				<!-- /.form -->
 			</div>
@@ -496,7 +547,7 @@
 					<div class="swiper-wrapper">
 						<!-- Slides -->
 						<div class="swiper-slide">
-							<div class="reviews-slider__item">
+							<div class="reviews-slider__item" data-aos="fade-left" data-aos-duration="1000">
 								<div class="reviews-slider__profile">
 									<img
 										src="img/reviews-avatar.jpeg"
@@ -733,7 +784,7 @@
 				<h2 class="activities__title">Other Activities</h2>
 				<!-- /.activities__title -->
 				<div class="activities-wrapper">
-					<div class="card activities__card">
+					<div class="card activities__card" data-aos="fade-right" data-aos-delay="100">
 						<img
 							src="img/activity-1.jpeg"
 							alt="The curious corner of chamarel"
@@ -745,7 +796,7 @@
 						<!-- /.card__button -->
 					</div>
 					<!-- /.card -->
-					<div class="card activities__card">
+					<div class="card activities__card" data-aos="fade-right" data-aos-delay="300">
 						<img src="img/activity-2.jpeg" alt="Gymkhana club golf course" class="card__image" />
 						<h3 class="card__title">Gymkhana club golf course</h3>
 						<!-- /.card__title -->
@@ -753,7 +804,7 @@
 						<!-- /.card__button -->
 					</div>
 					<!-- /.card -->
-					<div class="card activities__card">
+					<div class="card activities__card" data-aos="fade-left" data-aos-delay="500">
 						<img
 							src="img/activity-3.jpeg"
 							alt="Tamarind falls hiking trip - full day"
@@ -765,7 +816,7 @@
 						<!-- /.card__button -->
 					</div>
 					<!-- /.card -->
-					<div class="card activities__card">
+					<div class="card activities__card" data-aos="fade-left" data-aos-delay="700">
 						<img
 							src="img/activity-4.jpeg"
 							alt="The blue marine discovery quest"
@@ -881,6 +932,7 @@
 									placeholder="Your Full Name*"
 									name="name"
 									required
+									minlength="3"
 								/>
 							</div>
 							<div class="footer__input-group">
@@ -890,6 +942,7 @@
 									placeholder="Phone Number*"
 									name="phone"
 									required
+									minlength="17"
 								/>
 							</div>
 
@@ -946,6 +999,7 @@
 						placeholder="Phone Number*"
 						name="phone"
 						required
+						minlength="17"
 					/>
 					<input
 						type="email"
@@ -961,11 +1015,13 @@
 			</div>
 			<!-- /.modal__dialog -->
 		</div>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+		<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script> -->
+		<script src="js/jquery-3.5.1.min.js"></script>
 		<script src="js/parallax.min.js"></script>
 		<script src="js/swiper-bundle.min.js"></script>
 		<script src="js/jquery.validate.min.js"></script>
 		<script src="js/jquery.mask.min.js"></script>
+		<script src="js/aos.js"></script>
 		<script src="js/main.js"></script>
 	</body>
 </html>

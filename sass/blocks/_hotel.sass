@@ -180,11 +180,17 @@
     color: $light
     cursor: pointer
 .map
-  width: 347px
-  height: 213px
-  border-radius: 10px
-  overflow: hidden
-  &__size
+  &-google
+    background-image: url(../img/google-map.jpg)
+    width: 350px
+    height: 213px
+    border-radius: 10px
+    overflow: hidden
+    object-fit: cover
+    background-repeat: no-repeat
+    background-position: center
+    background-size: cover
+  &-frame
     width: 100%
 .swiper
   &-container

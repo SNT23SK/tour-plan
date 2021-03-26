@@ -5,7 +5,6 @@ $(document).ready(function () {
 		loop: true,
 		speed: 1000,
 		effect: "fade",
-
 		// Navigation arrows
 		navigation: {
 			nextEl: ".hotel-slider__button--next",
@@ -91,7 +90,8 @@ $(document).ready(function () {
 	});
 
 	// маски
-	$(".phone").mask("+7(999)999-99-99", { placeholder: "+7(999)999-99-99" });
+
+	$(".phone").mask("+7(999) 999-99-99", { placeholder: "+7(999)999-99-99" });
 
 	// обработка форм
 	$(".form").each(function () {
@@ -100,7 +100,7 @@ $(document).ready(function () {
 			messages: {
 				name: {
 					requred: "Please specify your name",
-					minlength: "The name must contain at least 3 characters",
+					minlength: "Enter at least 3 characters",
 				},
 				email: {
 					required: "We need your email address to contact you",
@@ -108,8 +108,10 @@ $(document).ready(function () {
 				},
 				phone: {
 					required: "Phone number required",
+					minlength: "Enter at least 10 characters.",
 				},
 			},
 		});
 	});
+	AOS.init();
 });
