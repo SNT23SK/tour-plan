@@ -2300,9 +2300,21 @@ template {
   .wrap__button {
     padding: 8px 20px;
   }
+  .footer {
+    padding-bottom: 5px;
+  }
   .footer__input-group {
     -ms-flex-preferred-size: 48%;
         flex-basis: 48%;
+  }
+  .footer__contact-form {
+    margin-top: -10px;
+  }
+  .footer__title--mb {
+    margin-bottom: 32px;
+  }
+  .basement {
+    padding-top: 0;
   }
   .basement-wrapper {
     -webkit-box-pack: justify;
