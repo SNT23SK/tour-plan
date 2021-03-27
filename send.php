@@ -13,17 +13,26 @@ $message = $_POST['message'];
 
 // Формирование самого письма
 
-$title = "Обращения с сайта Best Tour Plan";
-$body = "
-<h2>Новое письмо</h2>
-<b>Имя:</b> $name<br>
-<b>Почта:</b> $phone<br><br>
-<b>Сообщение:</b><br>$message
-";
-$title = "Новое обрщение Best Tour Plan";
+// $title = "Обращения с сайта Best Tour Plan";
+// $body = "
+// <h2>Новое письмо</h2>
+// <b>Имя:</b> $name<br>
+// <b>Почта:</b> $phone<br><br>
+// <b>Сообщение:</b><br>$message
+// ";
+// $title = "Новое обрщение Best Tour Plan";
+// $body = "
+// <h2>Новое обращение</h2>
+// <b>email:</b> $email<br>
+// ";
+$title = "Новое обращение Best Tour plan";
 $body = "
 <h2>Новое обращение</h2>
-<b>email:</b> $email<br>
+<b>Имя:</b> $name<br>
+<b>Телефон:</b> $phone<br><br>
+<b>Сообщение:</b><br>$message
+<b>Подписка:</b><br>$email
+
 ";
 
 // Настройки PHPMailer

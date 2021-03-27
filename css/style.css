@@ -1712,6 +1712,7 @@ template {
   padding: 18px;
   min-width: 160px;
   min-height: 50px;
+  border-radius: 4px;
 }
 
 .footer__info {
@@ -1891,9 +1892,16 @@ template {
   .advice-bottom {
     padding: 28px 32px;
   }
-  .footer__input {
+  .footer-wrapper {
+    -ms-grid-columns: 210px 200px 0 280px 190px;
+        grid-template-columns: 210px 200px 0 280px 190px;
+  }
+  .footer__input-group {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
+  }
+  .footer__title {
+    white-space: nowrap;
   }
 }
 
@@ -1990,51 +1998,83 @@ template {
     gap: 20px 20px;
         grid-template-areas: "blueheaven blueheaven" "bellemare whitepalace" "luxuryplace fivestar";
   }
-  .footer-wrapper {
-    -ms-grid-columns: repeat 6, 1fr;
-        grid-template-columns: repeat 6, 1fr;
-    grid-row-gap: 40px;
+  .footer {
+    padding-top: 70px;
   }
-  .footer__input-group {
-    -ms-flex-preferred-size: 48%;
-        flex-basis: 48%;
+  .footer-wrapper {
+    -ms-grid-columns: 180px 300px 190px;
+        grid-template-columns: 180px 300px 190px;
+    grid-row-gap: 51px;
+    grid-column-gap: 10px;
+    margin-bottom: 56px;
   }
   .footer__logo {
+    width: 97px;
+    height: 110px;
     -ms-grid-row: 1;
     -ms-grid-row-span: 1;
     grid-row: 1/2;
-    grid-column: span 2;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1/2;
   }
   .footer__social-network {
     -ms-grid-row: 1;
     -ms-grid-row-span: 1;
     grid-row: 1/2;
-    grid-column: span 4;
+    grid-column: span 3;
     -ms-flex-item-align: center;
         -ms-grid-row-align: center;
         align-self: center;
+    padding-top: 15px;
   }
   .footer__categories {
     -ms-grid-row: 2;
     -ms-grid-row-span: 1;
     grid-row: 2/3;
-    grid-column: span 2;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1/2;
   }
   .footer__additional {
-    grid-column: span 2;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    grid-row: 2/3;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2/3;
+    margin-left: 10px;
   }
   .footer__legal {
-    grid-column: span 2;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    grid-row: 2/3;
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 1;
+    grid-column: 3/4;
   }
   .footer__contact-details {
-    grid-column: span 5;
     -ms-grid-row: 3;
     grid-row: 3;
+    grid-column: span 4;
   }
   .footer__contact-form {
-    grid-column: span 5;
     -ms-grid-row: 4;
     grid-row: 4;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+    grid-column: 1/4;
+    max-width: 539px;
+  }
+  .footer__input-group {
+    -ms-flex-preferred-size: 48%;
+        flex-basis: 48%;
+  }
+  .footer__title--air {
+    margin-bottom: 26px;
+  }
+  .footer__item--air {
+    margin-bottom: 20px;
   }
   .modal__dialog {
     padding: 33px 56px;
@@ -2181,11 +2221,19 @@ template {
     margin-right: 40px;
   }
   .reviews {
-    padding: 40px 60px;
+    padding: 40px 60px 60px 60px;
   }
   .reviews__title {
+    font-style: normal;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
     font-size: 30px;
     line-height: 38px;
+    margin-bottom: 52px;
+  }
+  .reviews-slider__text {
+    max-width: 455px;
   }
   .reviews-slider__item {
     padding: 0 30px 30px;
@@ -2209,7 +2257,7 @@ template {
             transform: translate(50%, 0);
   }
   .activities {
-    padding-top: 40px;
+    padding-top: 60px;
     padding-bottom: 60px;
   }
   __title {
@@ -2253,8 +2301,8 @@ template {
     padding: 8px 20px;
   }
   .footer__input-group {
-    -ms-flex-preferred-size: 100%;
-        flex-basis: 100%;
+    -ms-flex-preferred-size: 48%;
+        flex-basis: 48%;
   }
   .basement-wrapper {
     -webkit-box-pack: justify;

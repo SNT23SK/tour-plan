@@ -19,8 +19,13 @@
     &-bottom
       padding: 28px 32px
   .footer
+    &-wrapper
+      grid-template-columns: 210px 200px 0 280px 190px
     &__input
-      flex-basis: 100%
+      &-group
+        flex-basis: 100%
+    &__title
+      white-space: nowrap
 // ___________________________________________________________________________________________
 @media  ( max-width: 992px )
   .container,
@@ -85,34 +90,50 @@
     gap: 20px 20px
     grid-template-areas: "blueheaven blueheaven" "bellemare whitepalace" "luxuryplace fivestar"
   .footer
+    padding-top: 70px
     &-wrapper
-      grid-template-columns: repeat (6, 1fr)
-      grid-row-gap: 40px
-    &__input
-      &-group
-        flex-basis: 48%
+      grid-template-columns: 180px 300px 190px
+      grid-row-gap: 51px
+      grid-column-gap: 10px
+      margin-bottom: 56px
     &__logo
+      width: 97px
+      height: 110px
       grid-row: 1/2
-      grid-column: span 2
+      grid-column: 1/2
     &__social
       &-network
         grid-row: 1/2
-        grid-column: span 4
+        grid-column: span 3
         align-self: center
+        padding-top: 15px
     &__categories
       grid-row: 2/3
-      grid-column: span 2
+      grid-column: 1/2
     &__additional
-      grid-column: span 2
+      grid-row: 2/3
+      grid-column: 2/3
+      margin-left: 10px
     &__legal
-      grid-column: span 2
+      grid-row: 2/3
+      grid-column: 3/4
     &__contact
       &-details
-        grid-column: span 5
         grid-row: 3
+        grid-column: span 4
       &-form
-        grid-column: span 5
         grid-row: 4
+        grid-column: 1/4
+        max-width: 539px
+    &__input
+      &-group
+        flex-basis: 48%
+    &__title
+      &--air
+        margin-bottom: 26px
+    &__item
+      &--air
+        margin-bottom: 20px
   .modal
     &__dialog
       padding: 33px 56px
@@ -216,11 +237,18 @@
     &-title
       margin-right: 40px
   .reviews
-    padding: 40px 60px
+    padding: 40px 60px 60px 60px
     &__title
+      font-style: normal
+      font-weight: bold
+      text-align: center
+      text-transform: uppercase
       font-size: 30px
       line-height: 38px
+      margin-bottom: 52px
     &-slider
+      &__text
+        max-width: 455px
       &__item
         padding: 0 30px 30px
         &::after,&::before
@@ -236,7 +264,7 @@
           margin-right: -65px
           transform: translate(50%,0)
   .activities
-    padding-top: 40px
+    padding-top: 60px
     padding-bottom: 60px
   &__title
     margin-bottom: 57px
@@ -271,7 +299,7 @@
   .footer
     &__input
       &-group
-        flex-basis: 100%
+        flex-basis: 48%
   .basement
     &-wrapper
       justify-content: space-between
