@@ -1534,6 +1534,11 @@ template {
   type: button;
 }
 
+.wrap__button:hover {
+  background-color: #fff;
+  color: #EC1F46;
+}
+
 .footer {
   background-color: #0A223D;
   color: #fff;
@@ -1636,6 +1641,10 @@ template {
 .footer__link--hotline {
   text-decoration: none;
   color: inherit;
+}
+
+.footer__link--hotline:hover {
+  text-decoration: underline;
 }
 
 .footer__logo {
