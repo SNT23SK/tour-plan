@@ -320,27 +320,44 @@
       margin-bottom: 10px
       // _________________________________________________________________________________________________
 @media ( max-width: 576px )
+  .container
+    max-width: 500px
+    width: 92%
   .logo
     width: 99px
   .hotel
+    margin-top: 0
+    &-name
+      margin-top: 12px
+    &-desription
+      width: 88%
+    &-info
+      margin-bottom: 40px
     &-right
       flex-direction: column
-      min-height: 450px
-    &__slider
+      min-height: 380px
+
+    &-slider
+      height: 100%
       margin-bottom: 20px
-      height: 250px
+      &__item
+        // margin-bottom: 10px
+        height: 180px
   .booking
     width: 100%
     min-width: 100%
+    margin-bottom: 20px
   .map
+    &-frame
     &-google
       width: 100%
       min-width: 100%
+      height: 170px
   .newsletter
-    padding: 76px 0 83px 0
+    padding: 78px 0 84px 0
     &__form
       align-self: start
-      width: 90%
+      width: 94%
     &-wrapper
       flex-direction: column
     &-title
@@ -350,12 +367,35 @@
     &__title
       font-size: 20px
       line-height: 25px
-      margin-bottom: 37px
+      margin-bottom: 40px
+
+  .reviews
+    padding-right: 10px
+    padding-left: 10px
+    &__title
+      font-style: normal
+      font-weight: bold
+      font-size: 18px
+      line-height: 23px
+      text-align: center
+      text-transform: uppercase
+      width: 200px
+      margin-bottom: 42px
+      text-align: center
+      margin-left: auto
+      margin-right: auto
   .card
     width: 100%
     height: 255px
   .activities
+    padding-top: 40px
+    padding-bottom: 40px
     &__title
+      font-style: normal
+      font-weight: bold
+      font-size: 18px
+      line-height: 23px
+      text-transform: uppercase
       margin-bottom: 36px
     &-wrapper
       flex-direction: column
@@ -382,32 +422,49 @@
     padding-bottom: 30px
     &-wrapper
       grid-template-columns: 1fr
+      grid-row-gap: 30px
+      margin-bottom: 30px
     &__logo
       grid-row: 1
       grid-column: 1
+      margin-bottom: 10px
     &__social
       &-network
         grid-row: 2
-        grid-column: 1
+        padding-top: 0
+        display: block
+      &-links
+        justify-content: start
+    &__link
+      margin-right: 15px
+    &__title
+      &--inline
+        flex-basis: 100%
+        margin-bottom: 16px
+      &--mb
+        margin-top: 50px
     &__additional
-      grid-row: 3
-      grid-column: 1
-    &__categories
       grid-row: 4
       grid-column: 1
-    &__legal
+      margin-left: 0
+    &__categories
       grid-row: 5
+      grid-column: 1
+    &__legal
+      grid-row: 3
       grid-column: 1
     &__contact
       &-details
         grid-row: 6
         grid-column: 1
-        width: 92%
+        width: 100%
       &-form
         grid-row: 7
         grid-column: 1
         display: flex
         flex-direction: column
+      &__item--air
+        margin-bottom: 18px
     &__message
       margin-bottom: 15px
       flex-basis: 92%
