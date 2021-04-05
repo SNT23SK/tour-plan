@@ -1562,9 +1562,9 @@ template {
   text-transform: uppercase;
 }
 
-.footer__title--air {
+.footer__title--contact {
   margin-top: 14px;
-  margin-bottom: 30px;
+  margin-bottom: 24px;
 }
 
 .footer__title--mb {
@@ -1598,12 +1598,26 @@ template {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+  font-family: Mulish;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
   line-height: 22px;
   color: #BDBDBD;
   list-style: none;
+}
+
+.footer__item--map {
+  margin-top: 14px;
+  margin-bottom: 0;
+}
+
+.footer__item--phone {
+  margin-top: 18px;
+}
+
+.footer__item--email {
+  margin-top: 24px;
 }
 
 .footer__item--air {
@@ -1615,6 +1629,11 @@ template {
 }
 
 .footer__link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.footer__link--hotline {
   text-decoration: none;
   color: inherit;
 }
@@ -1701,8 +1720,8 @@ template {
 
 .footer__input-group {
   margin-bottom: 15px;
-  -ms-flex-preferred-size: 48%;
-      flex-basis: 48%;
+  -ms-flex-preferred-size: 47%;
+      flex-basis: 47%;
 }
 
 .footer__form {
@@ -1746,7 +1765,7 @@ template {
 .basement {
   background-color: #0A223D;
   color: #fff;
-  padding: 56px 0 46px 0;
+  padding: 52px 0 46px 0;
 }
 
 .basement-wrapper {
@@ -1777,7 +1796,7 @@ template {
 }
 
 .basement-text__item {
-  margin-right: 10px;
+  margin-right: 12px;
 }
 
 .basement__logo {
