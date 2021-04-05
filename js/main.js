@@ -28,7 +28,7 @@ $(document).ready(function () {
 		loop: true,
 		speed: 500,
 		effect: "slide",
-
+		spaceBetween: 100,
 		// Navigation arrows
 		navigation: {
 			nextEl: ".reviews-slider__button--next",

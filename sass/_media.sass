@@ -138,11 +138,11 @@
     &__dialog
       padding: 33px 56px
     // _______________________________________________________________________________________
-@media ( max-width: 768px )
+@media ( max-width: 767px )
   body
     padding-top: 78px
   .container
-    max-width: 90%
+    max-width: 91%
   .navbar
     &-top
     &__search, &__user
@@ -200,6 +200,7 @@
   .hotel
     margin-bottom: 60px
     &__slider
+      height: 350px
       width: 100%
     &-wrapper
       justify-content: space-between
@@ -222,9 +223,6 @@
         color: $light
   .stars
     flex-basis: auto
-  .hotel
-    &__slider
-      height: 350px
   .booking
     margin-right: 20px
     width: 50%
@@ -237,16 +235,21 @@
     &-title
       margin-right: 40px
   .reviews
-    padding: 40px 60px 60px 60px
+    padding: 40px 0px 60px 0px
     &__title
+      font-family: Mulish
       font-style: normal
       font-weight: bold
-      text-align: center
-      text-transform: uppercase
       font-size: 30px
       line-height: 38px
-      margin-bottom: 52px
+      text-align: center
+      text-transform: uppercase
+      margin-bottom: 50px
     &-slider
+      &__avatar
+        margin-bottom: 10px
+      &__profile
+        margin-bottom: 34px
       &__text
         max-width: 455px
       &__item
@@ -254,18 +257,22 @@
         &::after,&::before
           display: none
       &__button
-        top: 32px
         &--prev
-          left: 50%
-          margin-left: -65px
-          transform: translate(-50%,0)
+          left: -5px
+          // left: 50%
+          // margin-left: -295px
+          transform: translate(0,50%)
         &--next
-          right: 50%
-          margin-right: -65px
-          transform: translate(50%,0)
+          right: -5px
+          // right: 50%
+          // margin-right: -5px
+          transform: translate(0,50%)
+  .swiper
+    &-slide
+      padding: 0 60px 0 60px
   .activities
     padding-top: 60px
-    padding-bottom: 60px
+    padding-bottom: 49px
   &__title
     margin-bottom: 57px
   .card
@@ -297,19 +304,86 @@
     &__button
       padding: 8px 20px
   .footer
-    padding-bottom: 5px
-    &__input
-      &-group
-        flex-basis: 48%
-    &__contact-form
-      margin-top: -10px
+    padding-bottom: 30px
+    &-container
+      margin-left: 32px
+    &-wrapper
+      grid-template-columns: 180px 300px 190px
+      grid-row-gap: 40px
+      margin-bottom: 30px
+    &__logo
+      grid-row: 1
+      grid-column: 1
+      margin-bottom: 10px
+    &__social
+      &-network
+        grid-row: 1
+        grid-column: 2
+        padding-bottom: 5px
+      &-links
+    &__link
+      margin-right: 10px
     &__title
+      &--inline
       &--mb
-        margin-bottom: 32px
+        margin-top: 50px
+    &__additional
+      grid-row: 2
+      grid-column: 2
+      margin-left: 0
+    &__categories
+      grid-row: 2
+      grid-column: 1
+    &__legal
+      grid-row: 2
+      grid-column: 3
+    &__contact
+      &-details
+        grid-row: 3
+        width: 100%
+      &-form
+        grid-row: 4
+        // grid-column: 1
+        display: flex
+        flex-direction: column
+      &__item--air
+        margin-bottom: 18px
+    &__title
+      &--contact
+        margin-top: 24px
+      &--mb
+        margin-top: 15px
+        margin-bottom: 34px
+    &__input-group
+      flex-basis: 47%
+    &__button
+      padding: 17px
+      height: 50px
+    &__message
+      margin-bottom: 22px
+    &__icon
+      min-width: 20px
+      object-fit: cover
+      min-height: 20px
+    &__item
+      &--phone
+        margin-top: 10px
+  // .footer
+  //   padding-bottom: 5px
+  //   &__input
+  //     &-group
+  //       flex-basis: 48%
+  //   &__contact-form
+  //     margin-top: -10px
+  //   &__title
+  //     &--mb
+  //       margin-bottom: 32px
   .basement
     padding-top: 0
     &-wrapper
       justify-content: space-between
+    &__logo
+      margin-top: -5px
   .modal
     &__dialog
       width: 120%
@@ -368,7 +442,6 @@
       font-size: 20px
       line-height: 25px
       margin-bottom: 40px
-
   .reviews
     padding-right: 10px
     padding-left: 10px

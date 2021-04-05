@@ -1068,7 +1068,8 @@ template {
   border: none;
   outline: none;
   background-color: transparent;
-  z-index: 20;
+  cursor: pointer;
+  z-index: 30;
 }
 
 .reviews-slider__button--prev {
@@ -2126,12 +2127,12 @@ template {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   body {
     padding-top: 78px;
   }
   .container {
-    max-width: 90%;
+    max-width: 91%;
   }
   .navbar__search, .navbar__user {
     display: none;
@@ -2217,6 +2218,7 @@ template {
     margin-bottom: 60px;
   }
   .hotel__slider {
+    height: 350px;
     width: 100%;
   }
   .hotel-wrapper {
@@ -2250,9 +2252,6 @@ template {
     -ms-flex-preferred-size: auto;
         flex-basis: auto;
   }
-  .hotel__slider {
-    height: 350px;
-  }
   .booking {
     margin-right: 20px;
     width: 50%;
@@ -2266,16 +2265,23 @@ template {
     margin-right: 40px;
   }
   .reviews {
-    padding: 40px 60px 60px 60px;
+    padding: 40px 0px 60px 0px;
   }
   .reviews__title {
+    font-family: Mulish;
     font-style: normal;
     font-weight: bold;
-    text-align: center;
-    text-transform: uppercase;
     font-size: 30px;
     line-height: 38px;
-    margin-bottom: 52px;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+  }
+  .reviews-slider__avatar {
+    margin-bottom: 10px;
+  }
+  .reviews-slider__profile {
+    margin-bottom: 34px;
   }
   .reviews-slider__text {
     max-width: 455px;
@@ -2286,24 +2292,22 @@ template {
   .reviews-slider__item::after, .reviews-slider__item::before {
     display: none;
   }
-  .reviews-slider__button {
-    top: 32px;
-  }
   .reviews-slider__button--prev {
-    left: 50%;
-    margin-left: -65px;
-    -webkit-transform: translate(-50%, 0);
-            transform: translate(-50%, 0);
+    left: -5px;
+    -webkit-transform: translate(0, 50%);
+            transform: translate(0, 50%);
   }
   .reviews-slider__button--next {
-    right: 50%;
-    margin-right: -65px;
-    -webkit-transform: translate(50%, 0);
-            transform: translate(50%, 0);
+    right: -5px;
+    -webkit-transform: translate(0, 50%);
+            transform: translate(0, 50%);
+  }
+  .swiper-slide {
+    padding: 0 60px 0 60px;
   }
   .activities {
     padding-top: 60px;
-    padding-bottom: 60px;
+    padding-bottom: 49px;
   }
   __title {
     margin-bottom: 57px;
@@ -2346,17 +2350,101 @@ template {
     padding: 8px 20px;
   }
   .footer {
+    padding-bottom: 30px;
+  }
+  .footer-container {
+    margin-left: 32px;
+  }
+  .footer-wrapper {
+    -ms-grid-columns: 180px 300px 190px;
+        grid-template-columns: 180px 300px 190px;
+    grid-row-gap: 40px;
+    margin-bottom: 30px;
+  }
+  .footer__logo {
+    -ms-grid-row: 1;
+    grid-row: 1;
+    -ms-grid-column: 1;
+    grid-column: 1;
+    margin-bottom: 10px;
+  }
+  .footer__social-network {
+    -ms-grid-row: 1;
+    grid-row: 1;
+    -ms-grid-column: 2;
+    grid-column: 2;
     padding-bottom: 5px;
   }
-  .footer__input-group {
-    -ms-flex-preferred-size: 48%;
-        flex-basis: 48%;
-  }
-  .footer__contact-form {
-    margin-top: -10px;
+  .footer__link {
+    margin-right: 10px;
   }
   .footer__title--mb {
-    margin-bottom: 32px;
+    margin-top: 50px;
+  }
+  .footer__additional {
+    -ms-grid-row: 2;
+    grid-row: 2;
+    -ms-grid-column: 2;
+    grid-column: 2;
+    margin-left: 0;
+  }
+  .footer__categories {
+    -ms-grid-row: 2;
+    grid-row: 2;
+    -ms-grid-column: 1;
+    grid-column: 1;
+  }
+  .footer__legal {
+    -ms-grid-row: 2;
+    grid-row: 2;
+    -ms-grid-column: 3;
+    grid-column: 3;
+  }
+  .footer__contact-details {
+    -ms-grid-row: 3;
+    grid-row: 3;
+    width: 100%;
+  }
+  .footer__contact-form {
+    -ms-grid-row: 4;
+    grid-row: 4;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .footer__contact__item--air {
+    margin-bottom: 18px;
+  }
+  .footer__title--contact {
+    margin-top: 24px;
+  }
+  .footer__title--mb {
+    margin-top: 15px;
+    margin-bottom: 34px;
+  }
+  .footer__input-group {
+    -ms-flex-preferred-size: 47%;
+        flex-basis: 47%;
+  }
+  .footer__button {
+    padding: 17px;
+    height: 50px;
+  }
+  .footer__message {
+    margin-bottom: 22px;
+  }
+  .footer__icon {
+    min-width: 20px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    min-height: 20px;
+  }
+  .footer__item--phone {
+    margin-top: 10px;
   }
   .basement {
     padding-top: 0;
@@ -2365,6 +2453,9 @@ template {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+  }
+  .basement__logo {
+    margin-top: -5px;
   }
   .modal__dialog {
     width: 120%;
