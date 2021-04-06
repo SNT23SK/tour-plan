@@ -2628,6 +2628,17 @@ template {
         -ms-flex-align: center;
             align-items: center;
   }
+  .activities__card--one {
+    -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+            order: -1;
+  }
+  .activities__card--three {
+    -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+            order: -1;
+    margin-bottom: 28px;
+  }
   .grid-container {
     display: -ms-grid;
     display: grid;
@@ -2649,6 +2660,9 @@ template {
   }
   .footer {
     padding-bottom: 30px;
+  }
+  .footer-container {
+    margin-left: auto;
   }
   .footer-wrapper {
     -ms-grid-columns: 1fr;
@@ -2686,6 +2700,12 @@ template {
   }
   .footer__title--mb {
     margin-top: 50px;
+  }
+  .footer__title--contact {
+    margin-top: 18px;
+  }
+  .footer__item--phone {
+    margin-top: 20px;
   }
   .footer__additional {
     -ms-grid-row: 4;

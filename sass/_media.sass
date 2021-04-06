@@ -511,6 +511,12 @@
     &-wrapper
       flex-direction: column
       align-items: center
+    &__card
+      &--one
+        order: -1
+      &--three
+        order: -1
+        margin-bottom: 28px
   .grid-container
     display: grid
     grid-template-columns: 1fr
@@ -529,6 +535,8 @@
         height: 250px
   .footer
     padding-bottom: 30px
+    &-container
+      margin-left: auto
     &-wrapper
       grid-template-columns: 1fr
       grid-row-gap: 30px
@@ -553,6 +561,12 @@
         margin-bottom: 16px
       &--mb
         margin-top: 50px
+      &--contact
+        margin-top: 18px
+    &__item
+      &--phone
+        margin-top: 20px
+        // flex-wrap: wrap
     &__additional
       grid-row: 4
       grid-column: 1
